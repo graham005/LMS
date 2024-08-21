@@ -1,0 +1,35 @@
+﻿@model IEnumerable<LMS.Controllers.AdminController.UserRoleViewModel>
+@{
+    ViewData["Title"] = "User List";
+}
+
+<h2>User List</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Full Name</th>
+            <th>Phone Number</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.User.Email</td>
+                <td>@item.User.UserName</td>
+                <td>@item.User.PhoneNumber</td>
+                <td>@item.Role</td>
+                <td>
+                    <a asp-action="EditUser" asp-route-id="@item.User.Id" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="DeleteUser" asp-route-id="@item.User.Id" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="AddUser" class="btn btn-primary">Create New User</a>
