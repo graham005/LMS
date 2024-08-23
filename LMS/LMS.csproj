@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Data Models\" />
     <Folder Include="Models\Services\" />
   </ItemGroup>
 

@@ -12,8 +12,8 @@
     <p>Phone Number: @Model.PhoneNumber</p>
 </div>
 
-<form asp-action="DeleteConfirmed" method="post">
+<form asp-action="DeleteUser" method="post">
     <input type="hidden" asp-for="Id" />
     <button type="submit" class="btn btn-danger">Delete</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    <a asp-action="UserList" class="btn btn-secondary">Cancel</a>
 </form>

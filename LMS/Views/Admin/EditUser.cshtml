@@ -5,7 +5,7 @@
 
 <h2>Edit User</h2>
 
-<form asp-action="Edit" method="post" class="form-horizontal">
+<form asp-action="EditUser" method="post" class="form-horizontal">
     <input asp-for="Id" type="hidden" />
     <div class="form-group">
         <label asp-for="Email" class="control-label"></label>
@@ -27,6 +27,7 @@
         <select asp-for="Role" class="form-control">
             <option value="Teacher">Teacher</option>
             <option value="Student">Student</option>
+            <option value="Admin">Admin</option>
         </select>
         <span asp-validation-for="Role" class="text-danger"></span>
     </div>
